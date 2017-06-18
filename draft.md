@@ -1,0 +1,104 @@
+# Title
+
+How to Kontribute
+
+# 最初に
+
+皆さん自分が誰なのかわからないと思いますが、気にしないで下さい。
+
+明らかなのは自分は
+
+* 2016/07からKotlinの外部コントリビューター
+* Kotlinが大好き
+
+このトークではKotlinにコントリビュートする場合の注意事項を伝えたいと思います。
+
+KotlinはKotlinで書かれています。
+私はKotlinを勉強したくて、最終的にKotlinを書くことを選びました。
+きっとここにいる人たちもみんなKotlinが好きですよね？
+だからここにいる人たちみんなが一緒にKotlinを盛り上げてくれたらいいなと思いこのトークをしたいと思います。
+
+# Things I won't explain
+
+* Git/GitHub
+* Kotlinの文法
+* WindowsやLinuxでの開発(私がMacユーザなので・・・。すまんね)
+
+# Outline
+
+アウトラインはこんな感じです。
+
+* Setup development environment
+* Communicating with other developers
+* Developing one of Kotlin plugin features
+* Implementing unit tests
+* Sending a pull request
+
+# Setup
+
+たぶん、ここが一番難しいです。
+
+## JDK
+
+信じられないと思いますが、KotlinはJDK1.6, 1.7, 1.8全てが必要です。
+
+私は色んなOSSに参加しているのですが、JDKを複数必要としているプロジェクトはこれが初めてです。
+
+こんな感じで設定するそうです。
+
+```
+  JAVA_HOME="path to JDK 1.8"
+  JDK_16="path to JDK 1.6"
+  JDK_17="path to JDK 1.7"
+  JDK_18="path to JDK 1.8"
+```
+
+JDK全てをインストールしたのであれば、私の設定ファイルを参考にすると簡単です。
+
+```
+export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
+export JDK_16=`/usr/libexec/java_home -v "1.6"`
+export JDK_17=`/usr/libexec/java_home -v "1.7"`
+export JDK_18=`/usr/libexec/java_home -v "1.8"`
+```
+
+HotSpotを利用していますが、OpenJDKでも動くはずです。試したことないけど。
+
+## 他のツール
+
+Apache Ant 1.9.4以上が必要です。
+
+"Gradle Meets Kotlin"
+
+## Let's build!
+
+The first build takes seriously long. My machine connect to wifi. It takes about 2 hours to download dependencies. So please please please don't give up here. Just wait. Downloading latest IDE takes time. TO: JetBrains, please please please make this download first!!!
+
+ということで、コマンドですが実は普通に叩こうとするとまずメモリーが足らなくて失敗します。
+そこで、antの設定をします。
+
+```
+export ANT_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
+```
+
+この環境変数を設定した後、以下のコマンドを叩きます。
+
+```
+ant -f update_dependencies.xml
+ant -f build.xml
+```
+
+ant -f update_dependencies.xml which will setup dependencies
+ant -f build.xml which will build the binaries of the compiler
+
+他にもオプショナルな設定がありますが、READMEを参考にしてください。
+私はこれだけで十分でした。
+
+## Kotlin plugin
+
+Kotlinプラグインは開発版を使う必要があります。
+この開発版は不定期に更新されます。毎回アップデートすることをオススメされていますが、
+masterを取り込んでビルド出来なくなった時点でアップデートしています。
+
+
+
