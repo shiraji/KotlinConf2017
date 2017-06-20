@@ -6,12 +6,12 @@ How to Kontribute
 
 皆さん自分が誰なのかわからないと思いますが、気にしないで下さい。
 
-明らかなのは自分は
+とりあえずここで必要なのは
 
 * 2016/07からKotlinの外部コントリビューター
 * Kotlinが大好き
 
-このトークではKotlinにコントリビュートする場合の注意事項を伝えたいと思います。
+ということです。このトークではKotlinにコントリビュートする場合の注意事項を伝えたいと思います。
 
 KotlinはKotlinで書かれています。
 私はKotlinを勉強したくて、最終的にKotlinを書くことを選びました。
@@ -97,8 +97,28 @@ ant -f build.xml which will build the binaries of the compiler
 ## Kotlin plugin
 
 Kotlinプラグインは開発版を使う必要があります。
+
+*設定方法は動画で示す*
+
+Preferences -> Plugins -> Browse Repositories -> Manage Repositories...
+
+https://teamcity.jetbrains.com/guestAuth/repository/download/bt345/bootstrap.tcbuildtag/updatePlugins.xml
+
 この開発版は不定期に更新されます。毎回アップデートすることをオススメされていますが、
-masterを取り込んでビルド出来なくなった時点でアップデートしています。
+私はmasterを取り込んでビルド出来なくなった時点でアップデートしています。
 
+Kotlinの開発専用マシンを用意出来るのであれば、それでいいのですが、私のように奥様にバジェット握られているエンジニアは
+IDEA_PROPERTIESによる設定で切り替えることが出来ます。
 
+詳細はこちら。
+https://intellij-support.jetbrains.com/hc/en-us/articles/207240985-Changing-IDE-default-directories-used-for-config-plugins-and-caches-storage
+
+私はpluginのパスだけ設定しています。
+
+```
+% cat idea.properties
+idea.plugins.path=/Users/isogai/kotlin_dev/plugins
+```
+
+Kotlinのstable版とdev版を切り替えることが出来ます。
 
