@@ -116,9 +116,42 @@ https://intellij-support.jetbrains.com/hc/en-us/articles/207240985-Changing-IDE-
 私はpluginのパスだけ設定しています。
 
 ```
+% env | grep IDEA
+IDEA_PROPERTIES=/Users/isogai/idea.properties
 % cat idea.properties
 idea.plugins.path=/Users/isogai/kotlin_dev/plugins
 ```
 
 Kotlinのstable版とdev版を切り替えることが出来ます。
+
+## Run!
+
+これでようやく環境周りは整いました。
+最後に、ビルドしたKotlinプロジェクトを動かしてみましょう。
+いくつかRunの設定がありますが、あとでそれは解説するとして、ここではIDEAを選び、実行します。
+
+そして、数秒待つと・・・
+
+IDEが立ち上がります。これでOKです。
+あとはこの立ち上がった子IDEでKotlinを書いてみて下さい。ビルドしたKotlinプロジェクトを利用することが出来ます。
+
+## Setupまとめ
+
+JDKの設定
+Antの設定
+Antでのビルド
+Kotlinプラグインの設定
+
+これらを揃えればRun出来るはずです。
+
+もし、この時点で動かない！となった場合、他の開発者に確認をしたほうが早いです。
+では、他の開発者とのコミュニケーションの方法を説明していきたいと思います。
+
+# Communicating with other developers
+
+他の開発者とのコミュニケーションにはいくつか手段があります。
+
+* Slack
+* youtrack
+* GitHub
 
