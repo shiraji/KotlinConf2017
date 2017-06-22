@@ -32,7 +32,6 @@ KotlinはKotlinで書かれています。
 * Communicating with other developers
 * Developing one of Kotlin plugin features
 * Implementing unit tests
-* Sending a pull request
 
 # Setup
 
@@ -176,4 +175,23 @@ JetBrainsの人やすでにコントリビュートしている方たちが親�
 youtrackはJetBrains製のIssue管理ツールです。Kotlinの公開されているissueはここで管理されています。
 
 https://youtrack.jetbrains.com/issues/KT
+
+担当したいIssueがあったら、これをやるね！とコメントすれば良いです。
+外部のコントリビューターはIssueにアサインされません。が、JetBrainsの人たちはコメントが入っていれば誰が対応しているのか把握しています。
+
+また、後でも話しますが、GitHubでpull requestを出した時に対象のIssueのコメントにpull requestのURLを貼り付けて下さい。
+
+## GitHub
+
+GitHub上でのやり取りはコードレビューくらいしかありません。Kotlinレポジトリにはissueは受け付けていないためです。issueはyoutrackで受け付けています。
+Kotlinの開発フローですが、ブランチ戦略はGitHub flowと同じです。
+masterからそれぞれがブランチを作成し、masterへマージされていきます。
+
+別件になりますが、KotlinのKEEPというレポジトリを紹介します。
+https://github.com/Kotlin/KEEP
+このレポジトリはKotlin Evolution and Enhancement Processと言い、Kotlinの新機能のproposalが議論されています。
+私は読むだけしかしていませんが、議論を読むだけでも非常に楽しいです。色々ルールがあるので、しっかりREADMEは読んで下さい。
+
+
+
 
