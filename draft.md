@@ -212,9 +212,10 @@ GitHubでPull Requestを受け付けています。会話はコードレビュ�
 ここまでが授業です。ここからは実際に今までの情報を元に開発をしてみたいと思います。
 私は主にKotlinプラグインのほうの開発をしています。外部のコントリビューターの多くが以下のカテゴリの対応を実施しています。
 
-* Inspection
-* Intention
-* Quickfix
-* J2K
+* Inspection - Reports wrong syntax, low performance, etc
+* Intention - Suggest better grammer, raise actions, etc
+* Quickfix - Fix the error
+* J2K - Java to Kotlin feature
+
 
 
