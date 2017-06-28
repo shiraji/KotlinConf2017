@@ -224,10 +224,59 @@ GitHubでPull Requestを受け付けています。会話はコードレビュ�
 
 他にもJ2Kだったり、Quickdocだったり、フォーマッターだったりといくつかあります。
 
+ところで、KotlinというよりIntellijの機能の話ですが、Inspection, Intention, Quickfixの違いってわかりますか？
+
+InspectionはIntelliJが内蔵している静的コード解析ツールでバグの可能性がある箇所を探し出したり、利用されていないコードやパフォーマンス問題となりそうな箇所を指摘したりすることでコード全体を改善する手助けになります。
+Intentionはコードの潜在的な問題点の修正案の提示や、修正を行ってくれる機能です。カーソル位置に適用されるインテンションのリストを見るにはOption + Enter(WindowsではAlt + Enter)を押します。
+
+A quick fix allows to apply an automatic changes to the code via Show Intention Actions 
+
+well, you don't understand this, right? Don't worry. You will figure this out after contributing Kotlin several times.
+
 ## Inspection
 
+https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d383dc
 
+**removing redundant spread operator for arrayOf callのgif**
 
+実際にやることは以下
+
+* idea/src/org/jetbrains/kotlin/idea/inspections/にXxxInspection.ktを追加
+* idea/src/META-INF/plugin.xmlにlocalInspectionのタグを追加
+* idea/resources/inspectionDescriptions/Xxx.htmlのInspectionの説明を追加
+* idea/testData/inspectionsLocal/xxxにテストデータを作成
+
+**ここはスライドというより、細かくやることを記載。だけど、実際には説明しない。やるときにこのスライド見てね！くらいでいいと思う。**
+
+**一つわかりにくいところがTestデータを作成し、テストを作成するところ。手順が複雑なので、そこはgifを作成し、紹介する。**
+
+## Intention
+
+https://github.com/JetBrains/kotlin/commit/83169ad78106ad407559492f617e6efa3107c020
+
+**Add open to callableのIntention**
+
+実際にやることは以下
+
+* idea/src/org/jetbrains/kotlin/idea/intentions/XxxIntention.ktを追加
+* idea/src/META-INF/plugin.xmlにintentionActionタグを追加
+* idea/resources/intentionDescriptions/XxxIntention/description.htmlにIntentionの説明を追加
+* idea/resources/intentionDescriptions/XxxIntention/before.kt.templateとidea/resources/intentionDescriptions/XxxIntention/after.kt.templateを追加
+* idea/testData/intentions/xxxにテストデータを作成
+
+**ここもやるときに見てね！くらいに止める。before/afterの<spot>タグの説明くらいはしてもいいかも？こいつもGenerate Testでいけることも再度言う**
+
+## Quickfix
+
+https://github.com/JetBrains/kotlin/commit/ab4eb1dd2098e1ea631ce7dbf8e63b8573eb2460
+
+Add better quickfix for scope functionsのgif
+
+* idea/src/org/jetbrains/kotlin/idea/quickfix/XxxFix.ktを作成する
+* idea/src/org/jetbrains/kotlin/idea/quickfix/QuickFixRegistrar.ktの対象のエラーにregisterする
+* idea/testData/quickfix/xxxにテストデータを作成
+
+**ここもやるときに見てね！くらいに止める。こいつもGenerate Testでいけることも再度言う**
 
 
 
