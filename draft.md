@@ -144,7 +144,7 @@ Kotlinプラグインの設定
 これらを揃えればRun出来るはずです。
 
 もし、この時点で動かない！となった場合、他の開発者に確認をしたほうが早いです。
-では、他の開発者とのコミュニケーションの方法を説明していきたいと思います。
+では、その他の開発者とのコミュニケーションの方法を説明していきたいと思います。
 
 # Communicating with other developers
 
@@ -181,6 +181,12 @@ https://youtrack.jetbrains.com/issues/KT
 
 また、後でも話しますが、GitHubでpull requestを出した時に対象のIssueのコメントにpull requestのURLを貼り付けて下さい。
 
+どれをやれば良いのかわからない！という方は
+
+https://youtrack.jetbrains.com/issues/KT?q=tag:%20%7BUp%20For%20Grabs%7D%20%23Unresolved
+
+ここに、外部コントリビュータ向けの"up-for-grabs"というタグがついたIssueがあるので、ここから選ぶのが良いです。
+
 ## GitHub
 
 GitHub上でのやり取りはコードレビューくらいしかありません。Kotlinレポジトリにはissueは受け付けていないためです。issueはyoutrackで受け付けています。
@@ -209,13 +215,19 @@ GitHubでPull Requestを受け付けています。会話はコードレビュ�
 
 # Developing one of Kotlin plugin features
 
-ここまでが授業です。ここからは実際に今までの情報を元に開発をしてみたいと思います。
-私は主にKotlinプラグインのほうの開発をしています。外部のコントリビューターの多くが以下のカテゴリの対応を実施しています。
+私は主にKotlinプラグインのほうの開発をしています。"up-for-grab"のIssueも主にKotlin pluginの開発に関するIssueです。
+外部のコントリビューターの多くが以下のカテゴリの対応を実施しています。
 
-* Inspection - Reports wrong syntax, low performance, etc
-* Intention - Suggest better grammer, raise actions, etc
-* Quickfix - Fix the error
-* J2K - Java to Kotlin feature
+* Inspection
+* Intention
+* Quickfix
+
+他にもJ2Kだったり、Quickdocだったり、フォーマッターだったりといくつかあります。
+
+## Inspection
+
+
+
 
 
 
