@@ -30,8 +30,7 @@ KotlinはKotlinで書かれています。
 
 * Setup development environment
 * Communicating with other developers
-* Developing one of Kotlin plugin features
-* Implementing unit tests
+* Developing/Testing Kotlin new features
 
 # Setup
 
@@ -278,5 +277,9 @@ Add better quickfix for scope functionsのgif
 
 **ここもやるときに見てね！くらいに止める。こいつもGenerate Testでいけることも再度言う**
 
+## 便利なツール
 
+Inspetion/Intentionを作る場合、Kotlinのどの部分がどのクラスに値するのか？を知らないと作ることが出来ません。
+
+例えば、**今まで作ったIntentionのgif**この文のここ、どう言うクラスで表しているかわかりますか？
 
