@@ -40,6 +40,12 @@ KotlinはKotlinで書かれています。
 
 信じられないと思いますが、KotlinはJDK1.6, 1.7, 1.8全てが必要です。
 
+For apple JDK1.6
+https://support.apple.com/kb/dl1572?locale=en_US
+
+For Java SE Development Kit 7
+http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html
+
 私は色んなOSSに参加しているのですが、JDKを複数必要としているプロジェクトはこれが初めてです。
 
 こんな感じで設定するそうです。
@@ -66,6 +72,9 @@ HotSpotを利用していますが、OpenJDKでも動くはずです。試した
 
 Apache Ant 1.9.4以上が必要です。
 
+Macで開発をする場合私はbrewを使いました。
+`brew install ant`
+
 "Gradle Meets Kotlin"
 
 ## Let's build!
@@ -86,8 +95,8 @@ ant -f update_dependencies.xml
 ant -f build.xml
 ```
 
-ant -f update_dependencies.xml which will setup dependencies
-ant -f build.xml which will build the binaries of the compiler
+ant -f update_dependencies.xml which will setup dependencies - e.g. My machine took "Total time: 32 minutes 35 seconds"
+ant -f build.xml which will build the binaries of the compiler - e.g. My machine took "Total time: 6 minutes 20 seconds"
 
 他にもオプショナルな設定がありますが、READMEを参考にしてください。
 私はこれだけで十分でした。
@@ -96,7 +105,7 @@ ant -f build.xml which will build the binaries of the compiler
 
 Kotlinプラグインは開発版を使う必要があります。
 
-*設定方法は動画で示す*
+**設定方法は動画で示す**
 
 Preferences -> Plugins -> Browse Repositories -> Manage Repositories...
 
@@ -290,3 +299,4 @@ Inspetion/Intentionを作る場合、Kotlinのどの部分がどのクラスに�
 実際にどうなるか見てみましょう。
 
 **解析ツールの動画**
+
