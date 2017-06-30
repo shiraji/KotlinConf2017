@@ -105,7 +105,7 @@ ant -f build.xml which will build the binaries of the compiler - e.g. My machine
 
 Kotlinプラグインは開発版を使う必要があります。
 
-**設定方法は動画で示す**
+![git/install_kotlin_dev.gif](git/install_kotlin_dev.gif)
 
 Preferences -> Plugins -> Browse Repositories -> Manage Repositories...
 
