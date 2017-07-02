@@ -105,14 +105,20 @@ ant -f build.xml which will build the binaries of the compiler - e.g. My machine
 
 Kotlinプラグインは開発版を使う必要があります。
 
-![git/install_kotlin_dev.gif](https://github.com/shiraji/KotlinConf2017/raw/master/gif/install_kotlin_dev.gif)
-
-Preferences -> Plugins -> Browse Repositories -> Manage Repositories...
+Preferences -> Plugins -> Browse Repositories -> Manage Repositories...に遷移して、
 
 https://teamcity.jetbrains.com/guestAuth/repository/download/bt345/bootstrap.tcbuildtag/updatePlugins.xml
 
+を設定すればOKです。
+
+わかりにくいので、動画にしてみました。
+
+![git/install_kotlin_dev.gif](https://github.com/shiraji/KotlinConf2017/raw/master/gif/install_kotlin_dev.gif)
+
 この開発版は不定期に更新されます。毎回アップデートすることをオススメされていますが、
 私はmasterを取り込んでビルド出来なくなった時点でアップデートしています。
+
+**ここはIDEAが修正されない限りスルーする。**
 
 Kotlinの開発専用マシンを用意出来るのであれば、それでいいのですが、私のように奥様にバジェット握られているエンジニアは
 IDEA_PROPERTIESによる設定で切り替えることが出来ます。
@@ -140,6 +146,9 @@ Kotlinのstable版とdev版を切り替えることが出来ます。
 そして、数秒待つと・・・
 
 IDEが立ち上がります。これでOKです。
+
+![run_idea](https://github.com/shiraji/KotlinConf2017/raw/master/gif/run_idea.gif)
+
 あとはこの立ち上がった子IDEでKotlinを書いてみて下さい。ビルドしたKotlinプロジェクトを利用することが出来ます。
 
 ## Setupまとめ
