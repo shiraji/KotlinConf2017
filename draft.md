@@ -139,10 +139,10 @@ Kotlinのstable版とdev版を切り替えることが出来ます。
 
 ## JDK, again!
 
-さて、ここまでがドキュメントに書いてあることです。
+ここまでがドキュメントに書いてあることです。
 
-ドキュメントに一つ書かれていない設定があります。実はmoduleのSDKに1.6が必要です。
-JDK1.6はすでにインストール済みだと思いますが、IDE側にも設定します。(結構昔からIDEを使っている人は必要ないかもしれません。)
+実はドキュメントに一つ書かれていない設定があります。
+ここまでの経緯でJDK1.6はすでにインストール済みだと思いますが、IDE側にも設定します。
 
 ![sdk1.6missing](https://github.com/shiraji/KotlinConf2017/raw/master/images/sdk1.6missing.png)
 
@@ -152,7 +152,7 @@ File -> Project Stucture... -> Module SDK 1.6 [Invalid] "New..." button -> Set 1
 
 ![setup_1.6sdk.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/setup_1.6sdk.gif)
 
-## Run!
+## Finally...Run!
 
 これでようやく環境周りは整いました。
 最後に、ビルドしたKotlinプロジェクトを動かしてみましょう。
@@ -165,6 +165,7 @@ IDEが立ち上がります。これでOKです。
 ![run_idea](https://github.com/shiraji/KotlinConf2017/raw/master/images/run_idea.gif)
 
 あとはこの立ち上がった子IDEでKotlinを書いてみて下さい。ビルドしたKotlinプロジェクトを利用することが出来ます。
+子IDEでは実プロジェクトに対して動くので、空のKotlin用テストプロジェクトを作って、そこでIssueの再現をすると良いと思いますよ。
 
 ## Setupまとめ
 
