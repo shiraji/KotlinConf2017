@@ -282,6 +282,7 @@ https://github.com/JetBrains/kotlin/commit/83169ad78106ad407559492f617e6efa3107c
 * idea/testData/intentions/xxxにテストデータを作成
 
 **ここもやるときに見てね！くらいに止める。before/afterの<spot>タグの説明くらいはしてもいいかも？こいつもGenerate Testでいけることも再度言う**
+**Generate Testへのテスト追加方法も記述**
 
 ## Quickfix
 
