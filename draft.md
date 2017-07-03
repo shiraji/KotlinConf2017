@@ -146,6 +146,10 @@ JDK1.6はすでにインストール済みだと思いますが、IDE側にも�
 
 ![sdk1.6missing](https://github.com/shiraji/KotlinConf2017/raw/master/images/sdk1.6missing.png)
 
+設定方法は
+
+File -> Project Stucture... -> Module SDK 1.6 [Invalid] "New..." button -> Set 1.6 Home
+
 ![setup_1.6sdk.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/setup_1.6sdk.gif)
 
 ## Run!
