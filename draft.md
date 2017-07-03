@@ -167,6 +167,12 @@ IDEが立ち上がります。これでOKです。
 あとはこの立ち上がった子IDEでKotlinを書いてみて下さい。ビルドしたKotlinプロジェクトを利用することが出来ます。
 子IDEでは実プロジェクトに対して動くので、空のKotlin用テストプロジェクトを作って、そこでIssueの再現をすると良いと思いますよ。
 
+DebugやBreakpointsも機能しますよ。
+
+
+
+**ここに動画入れるとわかりやすいかも？**
+
 ## Setupまとめ
 
 JDKの設定
@@ -226,11 +232,6 @@ GitHub上でのやり取りはコードレビューくらいしかありませ�
 Kotlinの開発フローですが、ブランチ戦略はGitHub flowと同じです。
 masterからそれぞれがブランチを作成し、masterへマージされていきます。
 
-別件になりますが、KotlinのKEEPというレポジトリを紹介します。
-https://github.com/Kotlin/KEEP
-このレポジトリはKotlin Evolution and Enhancement Processと言い、Kotlinの新機能のproposalが議論されています。
-私は読むだけしかしていませんが、議論を読むだけでも非常に楽しいです。色々ルールがあるので、しっかりREADMEは読んで下さい。
-
 ドキュメントの修正であればいきなりPRを送りつけてもマージされます。
 しかし、バグfixではなく、新機能などをいきなり送りつけてもReviewerがアサインされず最終的にマージされなかったりします。
 例えbug fixでもしっかり説明を書かなくてはなりません。
@@ -239,6 +240,13 @@ https://github.com/Kotlin/KEEP
 
 最近外部のコントリビューターが増えてきたため、レビューしてくれる人たちも大変そうです。
 ですので、いきなりGitHubにPRを送るのはKotlinのためにならないので、しっかり手順を踏んで、Kotlinのためになる開発をしてくれたら良いなと自分が思っています。
+
+**これ削って良いかも？**
+
+別件になりますが、KotlinのKEEPというレポジトリを紹介します。
+https://github.com/Kotlin/KEEP
+このレポジトリはKotlin Evolution and Enhancement Processと言い、Kotlinの新機能のproposalが議論されています。
+私は読むだけしかしていませんが、議論を読むだけでも非常に楽しいです。色々ルールがあるので、しっかりREADMEは読んで下さい。
 
 ## まとめ
 
@@ -255,7 +263,7 @@ GitHubでPull Requestを受け付けています。会話はコードレビュ�
 * Intention
 * Quickfix
 
-他にもJ2Kだったり、Quickdocだったり、フォーマッターだったりといくつかあります。
+他にもJ2Kだったり、Quickdocだったり、フォーマッタだったりといくつかあります。
 
 ところで、KotlinというよりIntellijの機能の話ですが、Inspection, Intention, Quickfixの違いってわかりますか？
 
