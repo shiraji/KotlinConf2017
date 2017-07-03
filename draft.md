@@ -113,7 +113,7 @@ https://teamcity.jetbrains.com/guestAuth/repository/download/bt345/bootstrap.tcb
 
 わかりにくいので、動画にしてみました。
 
-![git/install_kotlin_dev.gif](https://github.com/shiraji/KotlinConf2017/raw/master/gif/install_kotlin_dev.gif)
+![git/install_kotlin_dev.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/install_kotlin_dev.gif)
 
 この開発版は不定期に更新されます。毎回アップデートすることをオススメされていますが、
 私はmasterを取り込んでビルド出来なくなった時点でアップデートしています。
@@ -147,7 +147,7 @@ Kotlinのstable版とdev版を切り替えることが出来ます。
 
 IDEが立ち上がります。これでOKです。
 
-![run_idea](https://github.com/shiraji/KotlinConf2017/raw/master/gif/run_idea.gif)
+![run_idea](https://github.com/shiraji/KotlinConf2017/raw/master/images/run_idea.gif)
 
 あとはこの立ち上がった子IDEでKotlinを書いてみて下さい。ビルドしたKotlinプロジェクトを利用することが出来ます。
 
