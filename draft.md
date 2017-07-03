@@ -137,6 +137,17 @@ idea.plugins.path=/Users/isogai/kotlin_dev/plugins
 
 Kotlinのstable版とdev版を切り替えることが出来ます。
 
+## JDK, again!
+
+さて、ここまでがドキュメントに書いてあることです。
+
+ドキュメントに一つ書かれていない設定があります。実はmoduleのSDKに1.6が必要です。
+JDK1.6はすでにインストール済みだと思いますが、IDE側にも設定します。(結構昔からIDEを使っている人は必要ないかもしれません。)
+
+![sdk1.6missing](https://github.com/shiraji/KotlinConf2017/raw/master/images/sdk1.6missing.png)
+
+![setup_1.6sdk.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/setup_1.6sdk.gif)
+
 ## Run!
 
 これでようやく環境周りは整いました。
