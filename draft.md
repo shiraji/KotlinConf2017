@@ -169,8 +169,6 @@ IDEが立ち上がります。これでOKです。
 
 DebugやBreakpointsも機能しますよ。
 
-
-
 **ここに動画入れるとわかりやすいかも？**
 
 ## Setupまとめ
@@ -225,6 +223,9 @@ https://youtrack.jetbrains.com/issues/KT
 https://youtrack.jetbrains.com/issues/KT?q=tag:%20%7BUp%20For%20Grabs%7D%20%23Unresolved
 
 ここに、外部コントリビュータ向けの"up-for-grabs"というタグがついたIssueがあるので、ここから選ぶのが良いです。
+
+あとKotlin pluginの新機能はここでIssueをあげることができます。
+バグ報告などもここで受け付けています。重複するとJetBrainsの人が大変なので、同じような報告がないかはしっかり調べて報告してくださいね。
 
 ## GitHub
 
