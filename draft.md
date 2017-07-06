@@ -279,7 +279,7 @@ well, you don't understand this, right? Don't worry. You will figure this out af
 
 https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d383dc
 
-```
+```kotlin
 fun foo(vararg bars: Int) {
 }
 
@@ -305,7 +305,7 @@ fun main(args: Array<String>) {
 
 https://github.com/JetBrains/kotlin/commit/83169ad78106ad407559492f617e6efa3107c020
 
-```
+```kotlin
 open class Foo {
   fun foo() {} // can be "open"
 }
