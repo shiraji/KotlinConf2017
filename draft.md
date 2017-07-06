@@ -305,7 +305,7 @@ fun main(args: Array<String>) {
 
 https://github.com/JetBrains/kotlin/commit/83169ad78106ad407559492f617e6efa3107c020
 
-**Add open to callableのIntention**
+![make_open.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/make_open.gif)
 
 実際にやることは以下
 
