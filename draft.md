@@ -328,7 +328,7 @@ open class Foo {
 
 https://github.com/JetBrains/kotlin/commit/ab4eb1dd2098e1ea631ce7dbf8e63b8573eb2460
 
-```
+```kotlin
 fun foo(text: String?) {
     text.let { 
         it.length + 1 // Syntax error. "it" is nullable.
