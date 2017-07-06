@@ -279,7 +279,7 @@ well, you don't understand this, right? Don't worry. You will figure this out af
 
 https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d383dc
 
-**removing redundant spread operator for arrayOf callのgif**
+![spread_intention.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/spread_intention.gif)
 
 実際にやることは以下
 
