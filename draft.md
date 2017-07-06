@@ -322,7 +322,7 @@ https://github.com/JetBrains/kotlin/commit/83169ad78106ad407559492f617e6efa3107c
 
 https://github.com/JetBrains/kotlin/commit/ab4eb1dd2098e1ea631ce7dbf8e63b8573eb2460
 
-Add better quickfix for scope functionsのgif
+![quickfix_scope_fun.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/quickfix_scope_fun.gif)
 
 * idea/src/org/jetbrains/kotlin/idea/quickfix/XxxFix.ktを作成する
 * idea/src/org/jetbrains/kotlin/idea/quickfix/QuickFixRegistrar.ktの対象のエラーにregisterする
