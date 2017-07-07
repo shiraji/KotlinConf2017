@@ -365,9 +365,50 @@ fun main(args: Array<String>) {
 
 ![psi_viewer.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/psi_viewer.gif)
 
-つまり、これからKtValueArgumentに対してInspectionを作ることになります。
+つまり、これからKtValueArgumentに対してInspectionを作ることになります。AbstractKotlinInspectionを継承します。
+buildVisitorをoverrideし、KtVisitorVoidを実装します。
 
 ```kotlin
 class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+    override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
+        return object : KtVisitorVoid() {
+        }
+    }
 }
 ```
+
+KtVisitorVoidクラス内には多くのVisitメソッドがあります。このメソッドはさっき見た、表現にvisitする度に呼ばれます。KtValueArgumentのVisitメソッドはvisitArgumentメソッドなのでvisitArgumentメソッドを継承します。
+
+```kotlin
+class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+    override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
+        return object : KtVisitorVoid() {
+            override fun visitArgument(argument: KtValueArgument) {
+                println(argument.text)
+            }
+        }
+    }
+}
+```
+
+さて、実際にKtValueArgumentのvisitごとにこのメソッドが呼ばれるのかを確認したいです。その前に、plugin.xmlにlocalInspectionのタグを追加しておきます。
+
+```xml
+    <localInspection implementationClass="org.jetbrains.kotlin.idea.inspections.RemoveRedundantSpreadOperatorInspection"
+                     displayName="Redundant spread operator"
+                     groupName="Kotlin"
+                     enabledByDefault="true"
+                     level="WARNING"
+                     language="kotlin"
+    />
+```
+
+display nameはalt+enterの時に出てくるラベルで、groupNameは説明のグループ、enabledByDefaultは絶対true。levelはそれぞれに合わせたものにします。
+
+これで準備が整いました。ブレークポイントを入れて、デバッグモードで動かしてみましょう。
+
+**実際に動かしてみる**
+
+はい。どんどん来ます。。。さっき見せた通り、全てのKtValueArgumentの訪問時にメソッドが呼ばれます。
+
+
