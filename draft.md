@@ -277,19 +277,6 @@ well, you don't understand this, right? Don't worry. You will figure this out af
 
 ## Inspection
 
-https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d383dc
-
-```kotlin
-fun foo(vararg bars: Int) {
-}
-
-fun main(args: Array<String>) {
-    foo(*intArrayOf(1, 2, 3)) // "*intArrayOf" is useless!
-}
-```
-
-![spread_intention.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/spread_intention.gif)
-
 実際にやることは以下
 
 * idea/src/org/jetbrains/kotlin/idea/inspections/にXxxInspection.ktを追加
@@ -344,18 +331,43 @@ fun foo(text: String?) {
 
 **ここもやるときに見てね！くらいに止める。こいつもGenerate Testでいけることも再度言う**
 
-## 便利なツール
+
+さて、これだけだとわからないので、Inspectionを作ってみましょう。
+
+* idea/src/org/jetbrains/kotlin/idea/inspections/にXxxInspection.ktを追加
+* idea/src/META-INF/plugin.xmlにlocalInspectionのタグを追加
+* idea/resources/inspectionDescriptions/Xxx.htmlのInspectionの説明を追加
+* idea/testData/inspectionsLocal/xxxにテストデータを作成
+
+https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d383dc
+
+![spread_intention.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/spread_intention.gif)
 
 Inspetion/Intentionを作る場合、Kotlinのどの部分がどのクラスに値するのか？を知らないと作ることが出来ません。
 
-例えば、**今まで作ったIntentionのgif**この文のここ、どう言うクラスで表しているかわかりますか？
+```kotlin
+fun foo(vararg bars: Int) {
+}
 
-見ただけではわからないです。しかし、Intention/Inspectionを作るときに一番最初に知らないといけないのが対象の表現はどのクラスで認識されているのか？ということです。
+fun main(args: Array<String>) {
+    foo(*intArrayOf(1, 2, 3)) // "*intArrayOf" is useless!
+}
+```
 
-そこで、PSI Viewerを使います。Tools -> View PSI Structure of Current Fileで起動します。cmd+shift+aで探すのが簡単なので動画ではそれで探しています。
+この文法、どういう構成で作られているかわかりますか？解析するために全ての構文が何かしらの表現クラスで表現されています。
+そのクラスに対してIntention/Inspectionを作るのですが、実際問題`*intArrayOf(1,2,3)`がどういうクラスで表現されているかわかりますか？
+見ただけではわからないです。自分は慣れちゃったので、だいたいわかるんですけどね。
+しかし、Intention/Inspectionを作るときに一番最初に知らないといけないのが対象の表現はどのクラスで認識されているのか？ということです。
+
+そこで、PSI Viewerを使います。子IDEのTools -> View PSI Structure of Current Fileで起動します。cmd+shift+aで探すのが簡単なので動画ではそれで探しています。
 
 実際にどうなるか見てみましょう。
 
 ![psi_viewer.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/psi_viewer.gif)
 
+つまり、これからKtValueArgumentに対してInspectionを作ることになります。
 
+```kotlin
+class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+}
+```
