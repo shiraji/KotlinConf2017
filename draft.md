@@ -352,7 +352,7 @@ Inspetion/Intentionを作る場合、Kotlinのどの部分がどのクラスに�
 
 見ただけではわからないです。しかし、Intention/Inspectionを作るときに一番最初に知らないといけないのが対象の表現はどのクラスで認識されているのか？ということです。
 
-そこで、**名前**を使います。**実行手順**で起動します。
+そこで、PSI Viewerを使います。Tools -> View PSI Structure of Current Fileで起動します。cmd+shift+aで探すのが簡単なので動画ではそれで探しています。
 
 実際にどうなるか見てみましょう。
 
