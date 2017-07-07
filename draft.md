@@ -356,5 +356,6 @@ Inspetion/Intentionを作る場合、Kotlinのどの部分がどのクラスに�
 
 実際にどうなるか見てみましょう。
 
-**解析ツールの動画**
+![psi_viewer.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/psi_viewer.gif)
+
 
