@@ -411,4 +411,6 @@ display nameはalt+enterの時に出てくるラベルで、groupNameは説明�
 
 はい。どんどん来ます。。。さっき見せた通り、全てのKtValueArgumentの訪問時にメソッドが呼ばれます。
 
+ここからはそれぞれのIntention/Inspectionで変わってくるので、省略しますが、ここで、特定の文法になっていた場合、RegisterProblemします。
+RegisterProblem時にQuickfixのクラスも指定し、alt+enterした場合、quickfixが走るようになります。
 
