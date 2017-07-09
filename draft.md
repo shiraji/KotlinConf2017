@@ -411,6 +411,39 @@ display nameはalt+enterの時に出てくるラベルで、groupNameは説明�
 
 はい。どんどん来ます。。。さっき見せた通り、全てのKtValueArgumentの訪問時にメソッドが呼ばれます。
 
-ここからはそれぞれのIntention/Inspectionで変わってくるので、省略しますが、ここで、特定の文法になっていた場合、RegisterProblemします。
-RegisterProblem時にQuickfixのクラスも指定し、alt+enterした場合、quickfixが走るようになります。
+```kotlin
+class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+    override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
+        return object : KtVisitorVoid() {
+            override fun visitArgument(argument: KtValueArgument) {
+                super.visitArgument(argument)
+                // Spread Elementがあるかどうか？
+                val spreadElement = argument.getSpreadElement() ?: return
+                // *nameという形になっているかどうか？
+                if (argument.isNamed()) return
+                val argumentExpression = argument.getArgumentExpression() as? KtCallExpression ?: return
+                // 名前がarrayOfメソッドであるかどうか？
+                if (argumentExpression.isArrayOfMethod()) {
+                    // すべて合致したので、registerProblemする
+                    val argumentOffset = argument.startOffset
+                    val problemDescriptor = holder.manager.createProblemDescriptor(
+                            argument,
+                            TextRange(spreadElement.startOffset - argumentOffset,
+                                      argumentExpression.calleeExpression!!.endOffset - argumentOffset),
+                            "Remove redundant spread operator",
+                            ProblemHighlightType.LIKE_UNUSED_SYMBOL,
+                            isOnTheFly,
+                            RemoveRedundantSpreadOperatorQuickfix() // register quick fix
+                    )
+                    holder.registerProblem(problemDescriptor)
+                }
+            }
+        }
+    }
+}
+```
+
+RemoveRedundantSpreadOperatorQuickfixは*fooArrayOf(パラメータ)->パラメータに変換するquick fixです。
+
+
 
