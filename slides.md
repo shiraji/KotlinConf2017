@@ -171,3 +171,154 @@ want to try???
 * Register quick fix at idea/src/org/jetbrains/kotlin/idea/quickfix/QuickFixRegistrar.kt
 * Add test data idea/testData/quickfix/xxx
 
+# Developing/Testing Kotlin plugin features
+
+Well...I don't think this is enough...Let's make PR!
+
+# Inspection
+
+* Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
+* Add localInspection tag to idea/src/META-INF/plugin.xml
+* Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
+* Add test data idea/testData/inspectionsLocal/xxx
+
+# Remove redundant spread op
+
+```kotlin
+fun foo(vararg bars: Int) {
+}
+
+fun main(args: Array<String>) {
+    foo(*intArrayOf(1, 2, 3)) // "*intArrayOf" is useless!
+}
+```
+
+https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d383dc
+
+# Remove redundant spread op
+
+![spread_intention.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/spread_intention.gif)
+
+# Where to start???
+
+* Find out what Expression
+* Impossible with looking at code
+* Use PSI Viewer!
+
+# PSI Viewer
+
+* Tools -> View PSI Structure of Current File
+
+![psi_viewer.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/psi_viewer.gif)
+
+# Create Inspection file
+
+```kotlin
+class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+}
+```
+
+# Create Inspection file
+
+```kotlin
+class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+    override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
+        return object : KtVisitorVoid() {
+        }
+    }
+}
+```
+
+# Create Inspection file
+
+```kotlin
+class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+    override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
+        return object : KtVisitorVoid() {
+            override fun visitArgument(argument: KtValueArgument) {
+                println(argument.text)
+            }
+        }
+    }
+}
+```
+
+# Inspection
+
+* Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
+* Add localInspection tag to idea/src/META-INF/plugin.xml
+* Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
+* Add test data idea/testData/inspectionsLocal/xxx
+
+# Add localInspection
+
+```xml
+    <localInspection implementationClass="org.jetbrains.kotlin.idea.inspections.RemoveRedundantSpreadOperatorInspection"
+                     displayName="Redundant spread operator"
+                     groupName="Kotlin"
+                     enabledByDefault="true"
+                     level="WARNING"
+                     language="kotlin"
+    />
+```
+
+# Debug
+
+**gif**
+
+# Implement Inspection
+
+```kotlin
+class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+    override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
+        return object : KtVisitorVoid() {
+            override fun visitArgument(argument: KtValueArgument) {
+                super.visitArgument(argument)
+                // Is there spread operator?
+                val spreadElement = argument.getSpreadElement() ?: return
+                // Is there name?
+                if (argument.isNamed()) return
+                val argumentExpression = argument.getArgumentExpression() as? KtCallExpression ?: return
+                // the function name is arrayOf method?
+                if (argumentExpression.isArrayOfMethod()) {
+                    // OK, let's register problem
+                    val argumentOffset = argument.startOffset
+                    val problemDescriptor = holder.manager.createProblemDescriptor(
+                            argument,
+                            TextRange(spreadElement.startOffset - argumentOffset,
+                                      argumentExpression.calleeExpression!!.endOffset - argumentOffset),
+                            "Remove redundant spread operator",
+                            ProblemHighlightType.LIKE_UNUSED_SYMBOL,
+                            isOnTheFly,
+                            RemoveRedundantSpreadOperatorQuickfix() // register quick fix
+                    )
+                    holder.registerProblem(problemDescriptor)
+                }
+            }
+        }
+    }
+}
+```
+
+# Inspection
+
+✅ Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
+✅ Add localInspection tag to idea/src/META-INF/plugin.xml
+* Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
+* Add test data idea/testData/inspectionsLocal/xxx
+
+# Add description
+
+idea/resources/inspectionDescriptions/RemoveRedundantSpreadOperator.html
+
+```html
+<html>
+<body>
+This inspection reports the redundant spread operator for arrayOf call
+</body>
+</html>
+```
+
+# Add test data
+
+
