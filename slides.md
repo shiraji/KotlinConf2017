@@ -328,6 +328,7 @@ This inspection reports the redundant spread operator for arrayOf call
 
 # Add test data
 
-
-
+* create folder idea/testData/inspectionsLocal/removeRedundantSpreadOperator
+* Add .inspection file
+* create test cases (a.kt -> a.kt.after)
 
