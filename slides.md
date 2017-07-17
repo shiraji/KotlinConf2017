@@ -2,19 +2,28 @@
 
 TODO: テンプレートをもらったら実際に作る。
 
+# QR code of slide URL(CA.kt/KotlinConf)
+
 # How to Kontribute
+
+# How many people already contributed kotlin?
 
 # Who am I
 
 * Kontributing Kotlin since July 2016
 * Love Kotlin!
 * With beautiful wife + cute son
+* Work for ASICS/Runkeeper
 
-# Things I won't explain
+# Questions?
 
-* How to use git/github
-* Syntax of Kotlin
-* How to contribute in Win/Linux
+* Can you use git? (add, commit, push)
+* Do you have github account?
+* Can you write Kotlin?
+
+# YES???
+
+Contribute Kotlin!!!
 
 # Outline
 
@@ -31,7 +40,7 @@ TODO: テンプレートをもらったら実際に作る。
 
 * Need JDK1.8
 * Need JDK1.7!
-* Also need JDK1.6!!!
+* Need JDK1.6!!!
 
 # Setup - JDK - what doc says
 
@@ -61,7 +70,7 @@ export JDK_18=`/usr/libexec/java_home -v "1.8"`
 
 # Setup - Build
 
-* Run following command
+* Run command
 ```
 ant -f update_dependencies.xml
 ant -f build.xml
