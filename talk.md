@@ -57,5 +57,17 @@ Oops
 
 The third one is buid command
 
-Run this command
-First command took 32 minites adn second command took about 7 minites. 
+Run this command.
+
+First command will setup dependencies including download all dependencies. It took me 32 minites to complete
+Second command will build the binaries of the compiler. It took me about 7 minites.
+
+There are other setting that can support variety of development, but this is enough for the beginning. I haven't used any other settings.
+
+The forth setting is Kotlin plugin
+
+You must use development version Kotlin plugin to develop Kotlin.
+
+In order to use development version of plugin, go to Preferences -> Plugins -> Browse Repositories -> Manage Repositories... and then hit plus sign. Copy this URL.
+
+Well, it's hard to explain in doc, I brought gif images for how to setup dev plugin.
