@@ -71,3 +71,13 @@ You must use development version Kotlin plugin to develop Kotlin.
 In order to use development version of plugin, go to Preferences -> Plugins -> Browse Repositories -> Manage Repositories... and then hit plus sign. Copy this URL.
 
 Well, it's hard to explain in doc, I brought gif images for how to setup dev plugin.
+
+The last setting is...JDK, again!!!
+
+After setup Kotlin plugin, you can open kotlin project in Intellij IDE. Both community version and IDEA version works fine.
+At the first time, you can build. See this red lines. IDE's sdk setting is missing. So Go File -> Project Stucture... -> Module SDK 1.6 [Invalid] "New..." button -> Set 1.6 Home
+
+Again, it's hard to see what's going on, I made a movie. 
+
+Yea. Now everything is set. Let's run it. Hit >
+
