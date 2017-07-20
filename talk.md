@@ -81,3 +81,15 @@ Again, it's hard to see what's going on, I made a movie.
 
 Yea. Now everything is set. Let's run it. Hit >
 
+Explain what gif does.
+
+To sum up, as for setup, this is the hardest part, and you need to setup JDK, And and kotlin plugin.
+
+If you have a problem, ask other contributors like me.
+
+How? OK, let's talk about how to communicate with others.
+
+For communication, we mainly uses 3 tools, slack, youtrack, and github.
+
+
+
