@@ -120,6 +120,8 @@ GitHub is basically where JetBrains stuff give us feed back of your PR. Not much
 
 So, to conclude communication part,
 
-* Ask questions or communicate with others in slack.
+Ask questions or communicate with others use slack. Find and assign task in youtrack. and then send PR in GitHub.
+
+
 
 
