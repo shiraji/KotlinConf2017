@@ -112,3 +112,14 @@ https://youtrack.jetbrains.com/issues/KT?q=tag:%20%7BUp%20For%20Grabs%7D%20%23Un
 
 These issues are free to contribute. If you want to work the issue, comment "I am going to do this!". Then, the issue will be yours. One point, since we are external contributors, JetBrains stuff won't assign your name as assignee, but if you comment the issue, you are treated as assignee.
 
+After you send PR, you should comment PR URL. This is because JetBrains stuff didn't look at GitHub. They constantly check youtrack but not github.
+
+The last one is GitHub
+
+GitHub is basically where JetBrains stuff give us feed back of your PR. Not much communication happens. As far as I know, you should not send new feature without creating issues in youtrack. The small documentation or comment change can be merge without issues. If you are not sure, again, ask question in slack.
+
+So, to conclude communication part,
+
+* Ask questions or communicate with others in slack.
+
+
