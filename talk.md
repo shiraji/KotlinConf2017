@@ -91,5 +91,24 @@ How? OK, let's talk about how to communicate with others.
 
 For communication, we mainly uses 3 tools, slack, youtrack, and github.
 
+Let's talk about the use cases of these tools.
 
+The first one is slack. I believe most of people in this room already use the team. There is public team call kotlinlang.
+
+You can get invitation from this URL.
+
+kontributor channel is the one that most of contributors and JetBrains stuff stay.
+If you have trouble building Kotlin project or anything that is related to contributing Kotlin project, ask in the channel.
+In most time, people answer within one business day. 
+
+The second one is youtrack
+
+youtrack is the issue management tool that JetBrains developed. Kotlin's public issues are listed there.
+Have you visit this site? https://youtrack.jetbrains.com/issues/KT
+You can work anything if there is no assignee.
+If you don't have any idea which issue you are looking to, then check "up-for-grabs" tag.
+
+https://youtrack.jetbrains.com/issues/KT?q=tag:%20%7BUp%20For%20Grabs%7D%20%23Unresolved
+
+These issues are free to contribute. If you want to work the issue, comment "I am going to do this!". Then, the issue will be yours. One point, since we are external contributors, JetBrains stuff won't assign your name as assignee, but if you comment the issue, you are treated as assignee.
 
