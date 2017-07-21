@@ -66,7 +66,7 @@ export JDK_18=`/usr/libexec/java_home -v "1.8"`
 * `brew install ant`
 * Memory setting `export ANT_OPTS="-Xmx1024m -XX:MaxPermSize=512m"`
 
-* "Gradle Meets Kotlin"???
+* "Kotlin Meets Gradle"???
 
 # Setup - Build
 
@@ -133,9 +133,9 @@ ant -f build.xml
 
 https://youtrack.jetbrains.com/issues/KT
 * Kotlin issue manager
-* Comment "I'm gonna do this!"
 * "up-for-grabs" tag
 https://youtrack.jetbrains.com/issues/KT?q=tag:%20%7BUp%20For%20Grabs%7D%20%23Unresolved
+* Comment "I'm gonna do this!"
 
 # GitHub
 
