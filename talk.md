@@ -124,5 +124,5 @@ Are you ready?
 
 If you go to youtrack and find the "up-for-grabs" tag, you will find there are sevral types of issues. The main types of issues are developing these 3 features. Inspection, Intention, and quickfix.
 
-Beliefly I will explain what you need to do for these three features. 
+Briefly I will explain what you need to do for these three features. 
 
