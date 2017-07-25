@@ -139,3 +139,28 @@ Quickfix is
 > A quick fix allows to apply an automatic changes to the code
 
 Briefly I will explain what you need to do for these three features.
+
+This is the list of files you need to add when you create new Inspection, where Xxx is the Inspection name.
+
+As I said before, don't worry about the detail because I will post this slide.
+
+* Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
+* Add localInspection tag to idea/src/META-INF/plugin.xml
+* Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
+* Add test data idea/testData/inspectionsLocal/xxx
+
+For creating new Intention, this is the list, where Xxx is the Intention name
+
+* Add XxxIntention.kt idea/src/org/jetbrains/kotlin/idea/intentions/
+* Add intentionAction tag idea/src/META-INF/plugin.xml
+* Add intention description idea/resources/intentionDescriptions/XxxIntention/description.html
+* Add idea/resources/intentionDescriptions/XxxIntention/before.kt.template and idea/resources/intentionDescriptions/XxxIntention/after.kt.template
+* Add test data idea/testData/intentions/xxx
+
+And finally, the quickfix. Quick fix is the easiest.
+
+* Add XxxFix.kt idea/src/org/jetbrains/kotlin/idea/quickfix/
+* Register quick fix at idea/src/org/jetbrains/kotlin/idea/quickfix/QuickFixRegistrar.kt
+* Add test data idea/testData/quickfix/xxx
+
+
