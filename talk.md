@@ -124,10 +124,6 @@ Are you ready?
 
 If you go to youtrack and find the "up-for-grabs" tag, you will find there are sevral types of issues. The main types of issues are developing these 3 features. Inspection, Intention, and quickfix.
 
-Briefly I will explain what you need to do for these three features. 
-
-By the way, do you know the differences between these 3?
-
 According to the official documentation, 
 
 Inspection or Code Inspection is
@@ -142,3 +138,4 @@ Quickfix is
 
 > A quick fix allows to apply an automatic changes to the code
 
+Briefly I will explain what you need to do for these three features.
