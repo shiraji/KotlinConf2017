@@ -126,3 +126,19 @@ If you go to youtrack and find the "up-for-grabs" tag, you will find there are s
 
 Briefly I will explain what you need to do for these three features. 
 
+By the way, do you know the differences between these 3?
+
+According to the official documentation, 
+
+Inspection or Code Inspection is
+
+> [Code Inspection] detects compiler and runtime errors, suggests corrections and improvements before you even compile.
+
+Intention is
+
+> IntelliJ IDEA recognizes code constructs that can be optimized or improved, and suggests appropriate intention actions
+
+Quickfix is
+
+> A quick fix allows to apply an automatic changes to the code
+
