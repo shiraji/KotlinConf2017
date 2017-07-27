@@ -163,4 +163,8 @@ And finally, the quickfix. Quick fix is the easiest.
 * Register quick fix at idea/src/org/jetbrains/kotlin/idea/quickfix/QuickFixRegistrar.kt
 * Add test data idea/testData/quickfix/xxx
 
+Well...since we have a time, let me explain how to create inspection step by step.
+
+As I said before, these are the things I have to do before sending PR.
+
 
