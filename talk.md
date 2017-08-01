@@ -165,6 +165,18 @@ And finally, the quickfix. Quick fix is the easiest.
 
 Well...since we have a time, let me explain how to create inspection step by step.
 
-As I said before, these are the things I have to do before sending PR.
+As I said before, these are the things I have to do for creating inspections
+
+This is what I have contributed before. Basically, this inspection reports astarisk and intArrayOf method call is useless. And then quickfix remove them.
+
+And this one is the final product. 
+
+So, where I should start working? First thing is I need to find what Expression class is used. 
+
+It's imporssible to identify it by stealing the code. Well, if you spent more than 1 year, like me, you may be able to guess what expression is used. This gonna be KtValueListExpression.
+
+Anyway, it's hard, so use PSI Viewer which is bundled in child IDE.
+
+PSI Viewer is the tool that identify the structure of code. You can go to Tools and click View PSI Structure of Current File.
 
 
