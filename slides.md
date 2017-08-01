@@ -216,6 +216,7 @@ https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d38
 
 # PSI Viewer
 
+* Identify the structure
 * Tools -> View PSI Structure of Current File
 
 ![psi_viewer.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/psi_viewer.gif)
@@ -224,6 +225,16 @@ https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d38
 
 ```kotlin
 class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+}
+```
+
+# Create Inspection file
+
+```kotlin
+class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
+    override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
+        TODO("Do it later")
+    }
 }
 ```
 
