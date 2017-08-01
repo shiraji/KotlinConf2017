@@ -210,7 +210,7 @@ https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d38
 
 # Where to start???
 
-* Find out what Expression
+* Find out what Expression class
 * Impossible with looking at code
 * Use PSI Viewer!
 
