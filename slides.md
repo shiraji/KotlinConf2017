@@ -221,6 +221,14 @@ https://github.com/JetBrains/kotlin/commit/cbccf932a78d43e37d24a77f2ba178f866d38
 
 ![psi_viewer.gif](https://github.com/shiraji/KotlinConf2017/raw/master/images/psi_viewer.gif)
 
+# Inspection
+
+➡️ Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
+* Add localInspection tag to idea/src/META-INF/plugin.xml
+* Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
+* Add test data idea/testData/inspectionsLocal/xxx
+
+
 # Create Inspection file
 
 ```kotlin
@@ -268,7 +276,7 @@ class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
 # Inspection
 
 * Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
-* Add localInspection tag to idea/src/META-INF/plugin.xml
+➡️ Add localInspection tag to idea/src/META-INF/plugin.xml
 * Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
 * Add test data idea/testData/inspectionsLocal/xxx
 
@@ -326,7 +334,7 @@ class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
 
 ✅ Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
 ✅ Add localInspection tag to idea/src/META-INF/plugin.xml
-* Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
+➡️ Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
 * Add test data idea/testData/inspectionsLocal/xxx
 
 # Add description
@@ -346,12 +354,12 @@ This inspection reports the redundant spread operator for arrayOf call
 ✅ Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
 ✅ Add localInspection tag to idea/src/META-INF/plugin.xml
 ✅ Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
-* Add test data idea/testData/inspectionsLocal/xxx
+➡️ Add test data idea/testData/inspectionsLocal/xxx
 
 # Add test data
 
 * create folder idea/testData/inspectionsLocal/removeRedundantSpreadOperator
-* Add .inspection file
-* create test cases (a.kt -> a.kt.after)
 * idea/testData/inspection is old ways to test inspection
+* Add .inspection file
+* create test cases
 

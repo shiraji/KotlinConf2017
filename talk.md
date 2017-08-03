@@ -193,4 +193,44 @@ OK, so I'm ready for hello world.
 
 The next step is registering the inspection. To do so, we will add localInspection tag to plugin.xml file.
 
-localInpection tag is something like this. As of implementationClass value is the FQN of the inspection we just created. 
+localInpection tag is something like this. As of implementationClass value is the FQN of the inspection class.
+displayName is the text that appear when we press alt+enter
+
+We registered the inspection, let's debug it.
+
+***debug gif***
+
+To debug the inspection, the same as normal project, we can use break point. Put it on this line. And hit the debug button.
+
+Wait a few second...Child IDE popup.
+Now, let's write the sample code to see the inspection is registered or not.
+
+Create new file, copy and paste the code, and...there you go.
+
+You can check the variables and expressions like this.
+
+***end debug gif***
+
+Cool. So the next step is implementing the inspection. I will explain this line by line very quickly.
+
+Check whether argument has spread element
+Check the argument has name
+Check the argument expression is arrayOf method
+Finally, show warning and register the quickfix
+
+RemoveRedundantSpreadOperatorQuickfix is the quick fix that remove asterisk and the arrayOf method call.
+
+Now, we have done these 2 steps. The next one is the description of inspection.
+
+File name is the Inspection class name without "Inspection"
+
+Last one is the test cases.
+
+Create inspection folder with name lower camel without "Inspection"
+By the way, kotlin plugin has 2 ways to test inspections. Don't add the folder under idea/testData/inspections. inspectionLocal is the correct one.
+
+Add .inspection file that contains FQN of the inspection
+
+Create test data. The test data file name can be anything but I recommend to set the descriptive one.
+
+ 
