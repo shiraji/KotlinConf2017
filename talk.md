@@ -233,4 +233,8 @@ Add .inspection file that contains FQN of the inspection
 
 Create test data. The test data file name can be anything but I recommend to set the descriptive one.
 
- 
+Let's create basic test case.
+
+We needs 2 test data. First one is before applying quickfix
+
+The second one is after applying the quickfix

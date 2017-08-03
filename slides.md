@@ -361,5 +361,23 @@ This inspection reports the redundant spread operator for arrayOf call
 * create folder idea/testData/inspectionsLocal/removeRedundantSpreadOperator
 * idea/testData/inspection is old ways to test inspection
 * Add .inspection file
-* create test cases
+* create test data
+
+# Add test data
+
+```
+fun foo(vararg x: String) {}
+
+fun bar() {
+    foo(*arrayOf<caret>("abc"))
+}
+```
+
+```
+fun foo(vararg x: String) {}
+
+fun bar() {
+    foo("abc")
+}
+```
 
