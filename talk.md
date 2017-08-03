@@ -189,4 +189,8 @@ First, create a class that inherits `AbstractKotlinInspection` class. Override `
 
 So going back to code, this code uses `KtVisitorVoid` class. `KtVisitorVoid` class inherit `KtVisitor` class that the all visit method returns void. Well, it's written in Java, void is correct word.
 
-This is 
+OK, so I'm ready for hello world.
+
+The next step is registering the inspection. To do so, we will add localInspection tag to plugin.xml file.
+
+localInpection tag is something like this. As of implementationClass value is the FQN of the inspection we just created. 
