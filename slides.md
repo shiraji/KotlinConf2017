@@ -238,6 +238,8 @@ class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
 }
 ```
 
+***Class Hierarcy for KtVisitorVoid***
+
 # Create Inspection file
 
 ```kotlin
@@ -256,7 +258,7 @@ class RemoveRedundantSpreadOperatorInspection : AbstractKotlinInspection() {
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return object : KtVisitorVoid() {
             override fun visitArgument(argument: KtValueArgument) {
-                println(argument.text)
+                println("Hello World to ${argument.text}")
             }
         }
     }

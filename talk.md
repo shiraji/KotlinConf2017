@@ -185,6 +185,8 @@ Now, we understand the target class that the inspection applies is `KtValueArgum
 
 First, create a class that inherits `AbstractKotlinInspection` class. Override `buildVisitor` method. 
 
-`buildVisitor` returns `PsiElementVisitor` class. This class is a visitor which can be used to visit elements for all languages. We use `KtVisitor` which is a Kotlin version of visitor class. The visitor class has method `visitArgument` that has `KtValueArgument` as a parameter. Whenever the IDE's inspection visits `KtValueArgument`, IDE call instances that implement `visitArgument` method.
+`buildVisitor` returns `PsiElementVisitor` class. This class is a visitor which can be used to visit elements for all languages. We use `KtVisitor` which is a Kotlin version of visitor class. The visitor class has method `visitArgument` that has `KtValueArgument` as a parameter. Whenever the IDE's inspection visits `KtValueArgument`, IDE call registered inspections that implement `visitArgument` method.
 
-This code uses `KtVisitorVoid` class. `KtVisitorVoid` class inherit `KtVisitor` class that the all visit method returns void.
+So going back to code, this code uses `KtVisitorVoid` class. `KtVisitorVoid` class inherit `KtVisitor` class that the all visit method returns void. Well, it's written in Java, void is correct word.
+
+This is 
