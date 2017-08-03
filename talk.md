@@ -183,7 +183,8 @@ PSI Viewer is the tool that identifies the structure of the code. You can go to 
 
 Now, we understand the target class that the inspection applies is `KtValueArgument`. Let's create the inspection class for it.
 
-First, create a class that inherits `AbstractKotlinInspection` class. Override `buildVisitor` method. Return object of anonymouse class that inhefits `KtVisitorVoid`. 
+First, create a class that inherits `AbstractKotlinInspection` class. Override `buildVisitor` method. 
 
-KtVisitorVoid is the class that implement PsiElementVisitor and all of the method return Unit class. ***explain more about KtVisitorVoid***
+`buildVisitor` returns `PsiElementVisitor` class. This class is a visitor which can be used to visit elements for all languages. We use `KtVisitor` which is a Kotlin version of visitor class. The visitor class has method `visitArgument` that has `KtValueArgument` as a parameter. Whenever the IDE's inspection visits `KtValueArgument`, IDE call instances that implement `visitArgument` method.
 
+This code uses `KtVisitorVoid` class. `KtVisitorVoid` class inherit `KtVisitor` class that the all visit method returns void.
