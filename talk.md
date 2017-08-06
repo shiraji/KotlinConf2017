@@ -235,6 +235,6 @@ Create test data. The test data file name can be anything but I recommend to set
 
 Let's create basic test case.
 
-We needs 2 test data. First one is before applying quickfix
+We needs 2 test data. First one is before applying quickfix. The extention is `.kt.before`
 
-The second one is after applying the quickfix
+The second one is after applying the quickfix. The extention is `.kt.after`
