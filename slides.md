@@ -381,3 +381,8 @@ fun bar() {
 }
 ```
 
+# Test Data Options
+
+* Runtime // WITH_RUNTIME
+* Document?
+* AbstractInspectionTest/KotlinLightCodeInsightFixtureTestCase

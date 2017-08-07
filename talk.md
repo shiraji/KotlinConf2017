@@ -235,6 +235,12 @@ Create test data. The test data file name can be anything but I recommend to set
 
 Let's create basic test case.
 
-We needs 2 test data. First one is before applying quickfix. The extention is `.kt.before`
+We needs 2 test data. First one is before applying quickfix. The extention is `.kt`
+The test data must provides caret as triangle bracket with caret.
 
-The second one is after applying the quickfix. The extention is `.kt.after`
+The second one represents applying the quickfix. The extention is `.kt.after`
+
+There are so many options for these test data. For instance, when you want to use runtime dependencies, add comment WITH_RUNTIME at top of the both data files.
+And lots of people ask "is there document???" Well, there is text files named AbstractInspectionTest and KotlinLightCodeInsightFixtureTestCase. It's written in Kotlin!
+
+
