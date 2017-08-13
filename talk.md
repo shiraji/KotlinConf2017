@@ -241,6 +241,7 @@ The test data must provides caret as triangle bracket with caret.
 The second one represents applying the quickfix. The extention is `.kt.after`
 
 There are so many options for these test data. For instance, when you want to use runtime dependencies, add comment WITH_RUNTIME at top of the both data files.
-And lots of people ask "is there document???" Well, there is text files named AbstractInspectionTest and KotlinLightCodeInsightFixtureTestCase. It's written in Kotlin!
+And I imagine lots of people want to ask "is there document???" Well, there is text files named AbstractInspectionTest and KotlinLightCodeInsightFixtureTestCase. It's written in Kotlin!
+
 
 
