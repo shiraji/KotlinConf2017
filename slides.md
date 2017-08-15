@@ -386,3 +386,15 @@ fun bar() {
 * Runtime // WITH_RUNTIME
 * Document?
 * AbstractInspectionTest/KotlinLightCodeInsightFixtureTestCase
+
+# Inspection
+
+✅ Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
+✅ Add localInspection tag to idea/src/META-INF/plugin.xml
+✅ Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
+✅ Add test data idea/testData/inspectionsLocal/xxx
+
+# Sending PR
+
+* Hit "Send PR"
+* 
