@@ -396,5 +396,12 @@ fun bar() {
 
 # Sending PR
 
-* Hit "Send PR"
-* 
+* Commit with " #KT-nnnnn Fixed"
+* Send PR to master branch
+* Comment the PR URL to issue
+* Wait, wait, wait
+
+# Finally...
+
+***image of my name***
+

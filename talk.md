@@ -243,5 +243,21 @@ The second one represents applying the quickfix. The extention is `.kt.after`
 There are so many options for these test data. For instance, when you want to use runtime dependencies, add comment WITH_RUNTIME at top of the both data files.
 And I imagine lots of people want to ask "is there document???" Well, there is text files named AbstractInspectionTest and KotlinLightCodeInsightFixtureTestCase. It's written in Kotlin!
 
+Yea, we have done all TODO.
 
+Now, what? Sending PR.
+
+Commit size should be 1 or 2, Commit comment should include "Issue number Fixed".
+As I said before, JetBrains guys only watch YouTrack, not github. So, I recommend you to do is comment the pull request URL to the issue.
+If no one assign as a reviewer to the pull request within a few business days, Ask them at Slack. 
+
+Since JetBrains engineers are so busy, wait. Don't push them check the pull request again and again. Just wait.
+
+After they review the pull request, they will eventually, merge the commit into the master branch.
+
+If your pull request merge, your name will be listed Kotlin blog like this. The name come from GitHub profile. Change whatever you want them list.
+
+Yes, that's it for my talk. Well, now you guys are ready to become External contributor!!!
+
+Any questions?
 
