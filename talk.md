@@ -1,7 +1,8 @@
 Hi, Today, I am talking about "How to Kontribute?"
 
-Before I'm going to give a talk about how to contribute kotlin, I want to introduce myself
+Before I'm going to give a talk, I wanna introduce myself
 
+My name is Yoshi. My github account name is shiraji.
 I have been contributing kotlin since July 2016. I made about 50 commits by now. I love kotlin same as you guys. I have a beautiful wife and cute son. 
 
 I work for ASICS and Runkeeper which has office in here US/Japan. So, if you want to work with me, please contact me @shiraj_i at Twitter or @shiraji at Github
@@ -19,7 +20,7 @@ How many people say yes to all these questions? After this talk you guys are abl
 Because Kotlin use git as version control system. The repository is in Github. And Kotlin is written in Kotlin!!! Old part is still java but you need to send PR with only koltin code.
 
 One thing you must know is kotlin project consist the many features including Kotlin language, kotlin js, kotlin plugins and so on. The most external contributors mainly work on Kotlin plugin.
-Since all codes are in one repository, if you contribute kotlin plugin, you are kotlin contributor. And you can contribute kotlin languages, too if you want.
+And this talk focus on contributing Kotlin plugin.
 
 And I have to apologize to anyone who use windows or linux, because I only have mac OS, this talk is based on mac os. but I'm sure you can develop kotlin in windows or linux.
 
@@ -41,8 +42,8 @@ Yes, you need to install 3 version of JDKs!
 
 According to documentation, we need to have this setting.
 
-And it kinda hard to setup, so here is my setting.
-Don't worry I will post blog entry so that you can copy and paste my setting.
+And it kinda hard to setup, so here is what I did.
+Don't worry I will post this slide. You can use this QR code to see github gist.
 
 The next setting is Ant
 

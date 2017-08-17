@@ -65,7 +65,6 @@ export JDK_18=`/usr/libexec/java_home -v "1.8"`
 * Apache Ant 1.9.4
 * `brew install ant`
 * Memory setting `export ANT_OPTS="-Xmx1024m -XX:MaxPermSize=512m"`
-
 * "Kotlin Meets Gradle"???
 
 # Setup - Build
