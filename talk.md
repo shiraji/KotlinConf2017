@@ -15,7 +15,9 @@ Can you use git?
 Do you have github account?
 Can you write Koltin?
 
-How many people say yes to all these questions? After this talk you guys are able to contribute Kotlin!
+How many people say yes to all these questions? 
+
+The purpose of this talk is all you guys are able to contribute Kotlin!
 
 Because Kotlin use git as version control system. The repository is in Github. And Kotlin is written in Kotlin!!! Old part is still java but you need to send PR with only koltin code.
 
