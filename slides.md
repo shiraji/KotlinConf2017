@@ -21,8 +21,8 @@ TODO: テンプレートをもらったら実際に作る。
 * Do you have github account?
 * Can you write Kotlin?
 
-# YES???
 
+# YES???
 Contribute Kotlin!!!
 
 # Outline
