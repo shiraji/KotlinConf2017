@@ -357,10 +357,10 @@ This inspection reports the redundant spread operator for arrayOf call
 
 # Add test data
 
-* create folder idea/testData/inspectionsLocal/removeRedundantSpreadOperator
-* idea/testData/inspection is old ways to test inspection
-* Add .inspection file
-* create test data
+create folder idea/testData/inspectionsLocal/removeRedundantSpreadOperator
+idea/testData/inspection is old ways to test inspection
+Add .inspection file
+create test data
 
 # Add test data
 
@@ -395,10 +395,10 @@ fun bar() {
 
 # Sending PR
 
-* Commit with " #KT-nnnnn Fixed"
-* Send PR to master branch
-* Comment the PR URL to issue
-* Wait, wait, wait
+Commit with " #KT-nnnnn Fixed"
+Send PR to master branch
+Comment the PR URL to issue
+Wait, wait, wait
 
 # Finally...
 
