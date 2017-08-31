@@ -17,9 +17,9 @@ Can you write Koltin?
 
 How many people say yes to all these questions? 
 
-The purpose of this talk is all you guys are able to contribute Kotlin!
+The purpose of this talk is someone who said yes to the questions become a contributor of kotlin!
 
-Because Kotlin use git as version control system. The repository is in Github. And Kotlin is written in Kotlin!!! Old part is still java but you need to send PR with only koltin code.
+Because Kotlin use git. The repository is in Github. And Kotlin is written in Kotlin!!! Old part is still java but you need to send PR with only koltin code.
 
 One thing you must know is kotlin project consist the many features including Kotlin language, kotlin js, kotlin plugins and so on. The most external contributors mainly work on Kotlin plugin.
 And this talk focus on contributing Kotlin plugin.
@@ -108,63 +108,19 @@ Have you visit this site? https://youtrack.jetbrains.com/issues/KT
 This is the youtrack site that Kotlin's public issues are listed.
 You can work anything if there is no assignee.
 If you don't have any idea which issue you are looking for, then check "up-for-grabs" tag.
-
-https://youtrack.jetbrains.com/issues/KT?q=tag:%20%7BUp%20For%20Grabs%7D%20%23Unresolved
-
 These issues are free to contribute. If you want to work the issue, comment "I am going to do this!". Then, the issue will be yours. One point, since we are external contributors, JetBrains stuff won't assign your name as assignee, but if you comment the issue, you are treated as assignee.
 
 The last one is GitHub
 
 GitHub is basically where JetBrains stuff give us feed back of your PR. Not much communication happens in Github. As far as I know, you should not send new feature without creating issues in youtrack. The small documentation or comment change can be merge without issues. If you are not sure, again, ask question in slack.
 
-After sending PR, you should comment PR URL in youslack. This is because JetBrains stuff didn't look at GitHub. They constantly check youtrack but not github.
+After sending PR, you should comment PR URL in YouTrack's issue. This is because JetBrains stuff didn't look at GitHub. They constantly check youtrack but not github.
 
 So, to conclude communication part,
 
 Ask questions or communicate with others use slack. Find and assign task in youtrack. and then send PR in GitHub.
 
 Are you ready?
-
-If you go to youtrack and find the "up-for-grabs" tag, you will find there are sevral types of issues. The main types of issues are developing these 3 features. Inspection, Intention, and quickfix.
-
-According to the official documentation, 
-
-Inspection or Code Inspection is
-
-> [Code Inspection] detects compiler and runtime errors, suggests corrections and improvements before you even compile.
-
-Intention is
-
-> IntelliJ IDEA recognizes code constructs that can be optimized or improved, and suggests appropriate intention actions
-
-Quickfix is
-
-> A quick fix allows to apply an automatic changes to the code
-
-Briefly I will explain what you need to do for these three features.
-
-This is the list of files you need to add when you create new Inspection, where Xxx is the Inspection name.
-
-As I said before, don't worry about the detail because I will post this slide.
-
-* Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
-* Add localInspection tag to idea/src/META-INF/plugin.xml
-* Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
-* Add test data idea/testData/inspectionsLocal/xxx
-
-For creating new Intention, this is the list, where Xxx is the Intention name
-
-* Add XxxIntention.kt idea/src/org/jetbrains/kotlin/idea/intentions/
-* Add intentionAction tag idea/src/META-INF/plugin.xml
-* Add intention description idea/resources/intentionDescriptions/XxxIntention/description.html
-* Add idea/resources/intentionDescriptions/XxxIntention/before.kt.template and idea/resources/intentionDescriptions/XxxIntention/after.kt.template
-* Add test data idea/testData/intentions/xxx
-
-And finally, the quickfix. Quick fix is the easiest.
-
-* Add XxxFix.kt idea/src/org/jetbrains/kotlin/idea/quickfix/
-* Register quick fix at idea/src/org/jetbrains/kotlin/idea/quickfix/QuickFixRegistrar.kt
-* Add test data idea/testData/quickfix/xxx
 
 Well...since we have a time, let me explain how to create inspection step by step.
 
@@ -264,3 +220,47 @@ Yes, that's it for my talk. Well, now you guys are ready to become External cont
 
 Any questions?
 
+
+
+---
+
+If you go to youtrack and find the "up-for-grabs" tag, you will find there are sevral types of issues. The main types of issues are developing these 3 features. Inspection, Intention, and quickfix.
+
+According to the official documentation, 
+
+Inspection or Code Inspection is
+
+> [Code Inspection] detects compiler and runtime errors, suggests corrections and improvements before you even compile.
+
+Intention is
+
+> IntelliJ IDEA recognizes code constructs that can be optimized or improved, and suggests appropriate intention actions
+
+Quickfix is
+
+> A quick fix allows to apply an automatic changes to the code
+
+Briefly I will explain what you need to do for these three features.
+
+This is the list of files you need to add when you create new Inspection, where Xxx is the Inspection name.
+
+As I said before, don't worry about the detail because I will post this slide.
+
+* Add XxxInspection.kt idea/src/org/jetbrains/kotlin/idea/inspections/
+* Add localInspection tag to idea/src/META-INF/plugin.xml
+* Add Inspection descritption idea/resources/inspectionDescriptions/Xxx.html
+* Add test data idea/testData/inspectionsLocal/xxx
+
+For creating new Intention, this is the list, where Xxx is the Intention name
+
+* Add XxxIntention.kt idea/src/org/jetbrains/kotlin/idea/intentions/
+* Add intentionAction tag idea/src/META-INF/plugin.xml
+* Add intention description idea/resources/intentionDescriptions/XxxIntention/description.html
+* Add idea/resources/intentionDescriptions/XxxIntention/before.kt.template and idea/resources/intentionDescriptions/XxxIntention/after.kt.template
+* Add test data idea/testData/intentions/xxx
+
+And finally, the quickfix. Quick fix is the easiest.
+
+* Add XxxFix.kt idea/src/org/jetbrains/kotlin/idea/quickfix/
+* Register quick fix at idea/src/org/jetbrains/kotlin/idea/quickfix/QuickFixRegistrar.kt
+* Add test data idea/testData/quickfix/xxx
