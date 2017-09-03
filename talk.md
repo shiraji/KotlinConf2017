@@ -45,7 +45,7 @@ Yes, you need to install 3 version of JDKs!
 According to documentation, we need to have this setting.
 
 And it kinda hard to setup, so here is what I did.
-Don't worry I will post this slide. You can use this QR code to see github gist.
+Don't worry I will post this slide. 
 
 The next setting is Ant
 
