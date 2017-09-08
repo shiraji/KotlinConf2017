@@ -1,4 +1,4 @@
-Hi, Today, I am talking about "How to Kontribute?"
+ Hi, Today, I am talking about "How to Kontribute?"
 
 Before I'm going to give a talk, I wanna introduce myself
 
